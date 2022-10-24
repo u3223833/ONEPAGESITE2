@@ -1,135 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-
-$bg-gradient: linear-gradient(
-  180deg,
-  rgba(0, 0, 0, 0.6) 0%,
-  rgba(0, 0, 0, 0.3) 100%
-);
-
-* {
-  box-sizing: border-box;
-  user-select: none;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-body {
+*
+{
   margin: 0;
   padding: 0;
-  height: 100vh;
-  color: white;
-  background: black;
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
 }
 
-h2 {
-  font-size: clamp(1rem, 5vw, 5rem);
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 0.5em;
-  margin-right: -0.5em;
-  color: hsl(0, 0, 80%);
-  width: 90vw;
-  max-width: 1200px;
-}
-
-header {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  width: 100%;
-  z-index: 3;
-  height: 7em;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(0.66rem, 2vw, 1rem);
-  letter-spacing: 0.5em;
-}
-
-section {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  position: fixed;
-  visibility: hidden;
-
-  .outer,
-  .inner {
-    width: 100%;
-    height: 100%;
-    overflow-y: hidden;
-  }
-
-  .bg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-size: cover;
+.parallax 
+{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0)   0%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1524654458049-e36be0721fa2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    min-height: 100vh;
+    background-attachment: fixed;
     background-position: center;
-
-    h2 {
-      z-index: 2;
-    }
-
-    .clip-text {
-      overflow: hidden;
-    }
-  }
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Permanent Marker';
+    letter-spacing: 0.3em;
+    font-size: 1.5em;
+    text-align: center;
 }
 
-.first {
-  .bg {
-    background-image: $bg-gradient,
-      url("https://static.vecteezy.com/system/resources/previews/004/957/908/non_2x/realistic-halloween-background-vector.jpg");
+.frontpage_text 
+{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+
+.text
+{
+    color: #ffffff;
+    font-family: 'Nunito Sans';
+    width: 500px;
+    letter-spacing: 0.1em;
+    line-height: 30px;
+    text-align: center;
 }
 
-.second {
-  .bg {
-    background-image: $bg-gradient,
-      url("https://c4.wallpaperflare.com/wallpaper/44/888/946/abandoned-house-haunted-moonlight-night-wallpaper-preview.jpg");
-  }
+#content
+{
+    background-color: #181818;
+    box-sizing: border-box;
+    height: 100vh;
+    background-attachment: scroll;
+    background-size: cover;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.third {
-  .bg {
-    background-image: $bg-gradient,
-      url("https://img.freepik.com/free-photo/silhouette-scary-zombie-with-dramatic-background_9083-8119.jpg?w=2000&t=st=1666587555~exp=1666588155~hmac=69a04421c825d5c4357a40a26be618d31098ef7b61d2b3e231bfed1d939366eb");
-  }
-}
-
-.fourth {
-  .bg {
-    background-image: $bg-gradient,
-      url("https://img.freepik.com/free-vector/watercolor-halloween-background_52683-43697.jpg?w=2000&t=st=1666587619~exp=1666588219~hmac=08b75d5b81997eaaacf3a7b85a42955d7268386b31491bc5a1010db6dc159a2c");
-  }
-}
-
-.fifth {
-  .bg {
-    background-image: $bg-gradient,
-      url("https://img.freepik.com/free-vector/scary-graveyard-scene-with-moon-flying-bats_1017-34386.jpg?w=2000&t=st=1666587685~exp=1666588285~hmac=253a035c6872d50fd8d0f975a19a1c194ae9d3328b1a39afd4a30a67c8985b9c");
-    background-position: 50% 45%;
-  }
-}
-.sixth {
-  .bg {
-    background-image: $bg-gradient,
-      url("https://img.freepik.com/free-vector/happy-halloween-background-theme_52683-44522.jpg?w=2000&t=st=1666587784~exp=1666588384~hmac=3e809b43d1cbe05b2c3e020c6e296282206f8c5957381c17e66d7e9c039142bf");
-    background-position: 50% 45%;
-  }
-}
-
-h2 * {
-  will-change: transform;
+::selection
+{
+    background:#ffffff;
 }
